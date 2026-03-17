@@ -1,0 +1,8 @@
+module lab1_3c(D,CLK,Qa,Qb,Qc,Qan,Qbn,Qcn);
+	input D,CLK;
+	output Qa,Qb,Qc,Qan,Qbn,Qcn;
+	D_latch(D,CLK,Qa);
+	D_flipflop(D,CLK,Qb,Qbn);
+	D_flipflop(D,~CLK,Qc,Qcn);
+	not(Qan,Qa);
+endmodule
