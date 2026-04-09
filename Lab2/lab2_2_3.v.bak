@@ -1,0 +1,49 @@
+module lab2_2_3 (CLK, Reset, ENA, L1, L2);
+	input CLK,Reset,ENA;
+	output [6:0] L1, L2;
+	
+	wire [3:0]Q1;
+	reg [3:0]Q2;
+	wire n;
+	delay_1s (CLK,Reset,CLK_up);
+	always @(posedge CLK or negedge Reset) begin
+		if(!Reset) begin
+			Q1 <= 3'b000;
+			Q2 <= 3'b000;
+		end
+		else if(CLK_up)
+		count_4bit_2(CLK,CLK_up,Reset,Q1);
+		if (Q1 == 4'd9) begin
+			Q2 <= Q2 +1'b1;
+		end
+	end
+	
+	bcd_to_led7(Q1,L1);
+	
+	bcd_to_led7(Q2,L2);
+	
+endmodule
+
+
+module lab2_3_2(CLK, Reset, ENA, H0, H1, H2, H3, H4, H5, H6, H7);
+	input CLK, Reset, ENA;
+	output [6:0]H0,H1,H2,H3,H4,H5,H6,H7;
+
+	reg [2:0]Q;
+	wire CLK_up;
+	delay_1s (CLK,Reset,CLK_up);
+	always @(posedge CLK or negedge Reset) begin
+		if(!Reset)
+			Q <= 3'b000;
+		else if(CLK_up)
+		if(ENA) begin
+			if(Q == 3'd7)
+				Q <= 3'd0;
+			else
+				Q <= Q + 1;
+		end
+	end
+
+	lab1_2d(Q, H0, H1, H2, H3, H4, H5, H6, H7);
+
+endmodule 

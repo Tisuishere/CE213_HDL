@@ -1,0 +1,21 @@
+module count_4bit_2(CLK, ENA, Clear
+    input CLK,      // Tín hiệu xung clock
+    input ENA,      // Chân cho phép đếm (Enable)
+    input Clear,    // Chân reset (Active Low - Reset khi bằng 0)
+    output reg [3:0] Q // Output 4-bit (phải khai báo reg để gán trong always)
+);
+
+    // Mức Behavior: Chỉ mô tả "Khi nào" và "Làm gì"
+    always @(posedge CLK or negedge Clear) begin
+        if (!Clear) begin
+            // Nếu Clear = 0, reset giá trị về 0
+            Q <= 4'b0000;
+        end 
+        else if (ENA) begin
+            // Nếu có tín hiệu Enable, thực hiện phép cộng
+            Q <= Q + 1'b1;
+        end
+        // Nếu ENA = 0, Q sẽ tự giữ nguyên giá trị cũ (không cần viết else)
+    end
+
+endmodule

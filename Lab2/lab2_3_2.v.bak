@@ -1,0 +1,19 @@
+module lab2_3_2 (
+	input CLK,Reset,ENA,
+	output [6:0] led1,led2
+);
+	wire [3:0]Q1;
+	reg [3:0]Q2;
+	wire n;
+	delay_1s (CLK,n);
+	always @ (posedge n) begin
+		if (Q1 == 4'd9) begin
+			Q2 <= Q2 +1'b1;
+		end
+	end
+	bcd_to_led7(Q1,led1);
+	
+	count_4bit_2(ENA,n,Reset,Q1);
+	bcd_to_led7(Q2,led2);
+	
+endmodule

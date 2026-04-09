@@ -1,0 +1,20 @@
+module lab2_3_1(CLK, reset, ena, H0,H1,H2,H3,H4,H5,H6,H7);
+	input CLK, reset, ena;
+	output [6:0]H0,H1,H2,H3,H4,H5,H6,H7;
+
+	reg [3:0]Q;
+
+	always @(posedge CLK or negedge reset) begin
+		if(!reset)
+			Q <= 4'b0000;
+		else if(ena) begin
+			if(Q == 4'd7)
+				Q <= 4'd0;
+			else
+				Q <= Q + 1;
+		end
+	end
+
+	lab1_b mydecoder(Q[2:0], H0,H1,H2,H3,H4,H5,H6,H7);
+
+endmoduleg
