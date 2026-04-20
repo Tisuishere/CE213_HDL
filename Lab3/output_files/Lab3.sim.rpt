@@ -1,0 +1,518 @@
+Simulator report for Lab3
+Mon Apr 20 10:55:56 2026
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 214 nodes    ;
+; Simulation Coverage         ;      33.18 % ;
+; Total Number of Transitions ; 1184         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                               ;
++--------------------------------------------------------------------------------------------+-------------------------------------+---------------+
+; Option                                                                                     ; Setting                             ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                          ; Timing        ;
+; Start time                                                                                 ; 0 ns                                ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                 ;               ;
+; Vector input source                                                                        ; D:/Study_project/HDL/Lab3/Morse.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                  ; On            ;
+; Check outputs                                                                              ; Off                                 ; Off           ;
+; Report simulation coverage                                                                 ; On                                  ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                  ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                  ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                  ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                 ; Off           ;
+; Detect glitches                                                                            ; Off                                 ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                 ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                 ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                 ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                 ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                  ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                          ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                 ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                 ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                ; Auto          ;
++--------------------------------------------------------------------------------------------+-------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      33.18 % ;
+; Total nodes checked                                 ; 214          ;
+; Total output ports checked                          ; 214          ;
+; Total output ports with complete 1/0-value coverage ; 71           ;
+; Total output ports with no 1/0-value coverage       ; 142          ;
+; Total output ports with no 1-value coverage         ; 142          ;
+; Total output ports with no 0-value coverage         ; 143          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                  ;
++-------------------------------------+-------------------------------------+------------------+
+; Node Name                           ; Output Port Name                    ; Output Port Type ;
++-------------------------------------+-------------------------------------+------------------+
+; |Cau3|curr_morse~0                  ; |Cau3|curr_morse~0                  ; out              ;
+; |Cau3|curr_morse~1                  ; |Cau3|curr_morse~1                  ; out              ;
+; |Cau3|curr_morse~2                  ; |Cau3|curr_morse~2                  ; out              ;
+; |Cau3|curr_morse~3                  ; |Cau3|curr_morse~3                  ; out              ;
+; |Cau3|curr_morse~4                  ; |Cau3|curr_morse~4                  ; out              ;
+; |Cau3|curr_morse~5                  ; |Cau3|curr_morse~5                  ; out              ;
+; |Cau3|curr_morse~6                  ; |Cau3|curr_morse~6                  ; out              ;
+; |Cau3|state~0                       ; |Cau3|state~0                       ; out              ;
+; |Cau3|state~1                       ; |Cau3|state~1                       ; out              ;
+; |Cau3|LEDR0~0                       ; |Cau3|LEDR0~0                       ; out              ;
+; |Cau3|curr_morse~12                 ; |Cau3|curr_morse~12                 ; out              ;
+; |Cau3|curr_morse~13                 ; |Cau3|curr_morse~13                 ; out              ;
+; |Cau3|curr_morse~14                 ; |Cau3|curr_morse~14                 ; out              ;
+; |Cau3|curr_morse~15                 ; |Cau3|curr_morse~15                 ; out              ;
+; |Cau3|curr_morse~16                 ; |Cau3|curr_morse~16                 ; out              ;
+; |Cau3|curr_morse~17                 ; |Cau3|curr_morse~17                 ; out              ;
+; |Cau3|bit_count~0                   ; |Cau3|bit_count~0                   ; out              ;
+; |Cau3|bit_count~1                   ; |Cau3|bit_count~1                   ; out              ;
+; |Cau3|bit_count~2                   ; |Cau3|bit_count~2                   ; out              ;
+; |Cau3|bit_count~3                   ; |Cau3|bit_count~3                   ; out              ;
+; |Cau3|state~2                       ; |Cau3|state~2                       ; out              ;
+; |Cau3|LEDR0~1                       ; |Cau3|LEDR0~1                       ; out              ;
+; |Cau3|curr_morse~24                 ; |Cau3|curr_morse~24                 ; out              ;
+; |Cau3|curr_morse~25                 ; |Cau3|curr_morse~25                 ; out              ;
+; |Cau3|curr_morse~26                 ; |Cau3|curr_morse~26                 ; out              ;
+; |Cau3|curr_morse~27                 ; |Cau3|curr_morse~27                 ; out              ;
+; |Cau3|curr_morse~28                 ; |Cau3|curr_morse~28                 ; out              ;
+; |Cau3|curr_morse~29                 ; |Cau3|curr_morse~29                 ; out              ;
+; |Cau3|bit_count~5                   ; |Cau3|bit_count~5                   ; out              ;
+; |Cau3|bit_count~6                   ; |Cau3|bit_count~6                   ; out              ;
+; |Cau3|bit_count~7                   ; |Cau3|bit_count~7                   ; out              ;
+; |Cau3|state~3                       ; |Cau3|state~3                       ; out              ;
+; |Cau3|LEDR0~2                       ; |Cau3|LEDR0~2                       ; out              ;
+; |Cau3|curr_morse~36                 ; |Cau3|curr_morse~36                 ; out              ;
+; |Cau3|curr_morse~37                 ; |Cau3|curr_morse~37                 ; out              ;
+; |Cau3|curr_morse~38                 ; |Cau3|curr_morse~38                 ; out              ;
+; |Cau3|curr_morse~39                 ; |Cau3|curr_morse~39                 ; out              ;
+; |Cau3|curr_morse~40                 ; |Cau3|curr_morse~40                 ; out              ;
+; |Cau3|curr_morse~41                 ; |Cau3|curr_morse~41                 ; out              ;
+; |Cau3|curr_morse~42                 ; |Cau3|curr_morse~42                 ; out              ;
+; |Cau3|bit_count~9                   ; |Cau3|bit_count~9                   ; out              ;
+; |Cau3|bit_count~10                  ; |Cau3|bit_count~10                  ; out              ;
+; |Cau3|bit_count~11                  ; |Cau3|bit_count~11                  ; out              ;
+; |Cau3|state                         ; |Cau3|state                         ; regout           ;
+; |Cau3|LEDR0~reg0                    ; |Cau3|LEDR0~reg0                    ; regout           ;
+; |Cau3|bit_count[2]                  ; |Cau3|bit_count[2]                  ; regout           ;
+; |Cau3|bit_count[1]                  ; |Cau3|bit_count[1]                  ; regout           ;
+; |Cau3|bit_count[0]                  ; |Cau3|bit_count[0]                  ; regout           ;
+; |Cau3|curr_morse[11]                ; |Cau3|curr_morse[11]                ; regout           ;
+; |Cau3|curr_morse[10]                ; |Cau3|curr_morse[10]                ; regout           ;
+; |Cau3|curr_morse[9]                 ; |Cau3|curr_morse[9]                 ; regout           ;
+; |Cau3|curr_morse[8]                 ; |Cau3|curr_morse[8]                 ; regout           ;
+; |Cau3|curr_morse[7]                 ; |Cau3|curr_morse[7]                 ; regout           ;
+; |Cau3|curr_morse[6]                 ; |Cau3|curr_morse[6]                 ; regout           ;
+; |Cau3|curr_morse[5]                 ; |Cau3|curr_morse[5]                 ; regout           ;
+; |Cau3|CLOCK_50                      ; |Cau3|CLOCK_50                      ; out              ;
+; |Cau3|KEY_START[1]                  ; |Cau3|KEY_START[1]                  ; out              ;
+; |Cau3|LEDR0                         ; |Cau3|LEDR0                         ; pin_out          ;
+; |Cau3|pulse_05s:timer_inst|pulse    ; |Cau3|pulse_05s:timer_inst|pulse    ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count~24 ; |Cau3|pulse_05s:timer_inst|count~24 ; out              ;
+; |Cau3|pulse_05s:timer_inst|count[0] ; |Cau3|pulse_05s:timer_inst|count[0] ; regout           ;
+; |Cau3|Add0~0                        ; |Cau3|Add0~0                        ; out0             ;
+; |Cau3|Add0~1                        ; |Cau3|Add0~1                        ; out0             ;
+; |Cau3|Add0~2                        ; |Cau3|Add0~2                        ; out0             ;
+; |Cau3|Add0~3                        ; |Cau3|Add0~3                        ; out0             ;
+; |Cau3|Add0~4                        ; |Cau3|Add0~4                        ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~0   ; |Cau3|pulse_05s:timer_inst|Add0~0   ; out0             ;
+; |Cau3|Equal0~0                      ; |Cau3|Equal0~0                      ; out0             ;
+; |Cau3|Equal0~1                      ; |Cau3|Equal0~1                      ; out0             ;
+; |Cau3|Equal0~3                      ; |Cau3|Equal0~3                      ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Equal0~0 ; |Cau3|pulse_05s:timer_inst|Equal0~0 ; out0             ;
++-------------------------------------+-------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                       ;
++--------------------------------------+--------------------------------------+------------------+
+; Node Name                            ; Output Port Name                     ; Output Port Type ;
++--------------------------------------+--------------------------------------+------------------+
+; |Cau3|WideOr0                        ; |Cau3|WideOr0                        ; out0             ;
+; |Cau3|shift_reg~0                    ; |Cau3|shift_reg~0                    ; out0             ;
+; |Cau3|max_bits~0                     ; |Cau3|max_bits~0                     ; out0             ;
+; |Cau3|WideOr1                        ; |Cau3|WideOr1                        ; out0             ;
+; |Cau3|WideOr2                        ; |Cau3|WideOr2                        ; out0             ;
+; |Cau3|curr_morse~7                   ; |Cau3|curr_morse~7                   ; out              ;
+; |Cau3|curr_morse~8                   ; |Cau3|curr_morse~8                   ; out              ;
+; |Cau3|curr_morse~9                   ; |Cau3|curr_morse~9                   ; out              ;
+; |Cau3|curr_morse~10                  ; |Cau3|curr_morse~10                  ; out              ;
+; |Cau3|curr_morse~11                  ; |Cau3|curr_morse~11                  ; out              ;
+; |Cau3|curr_morse[0]                  ; |Cau3|curr_morse[0]                  ; regout           ;
+; |Cau3|curr_morse~18                  ; |Cau3|curr_morse~18                  ; out              ;
+; |Cau3|curr_morse~19                  ; |Cau3|curr_morse~19                  ; out              ;
+; |Cau3|curr_morse~20                  ; |Cau3|curr_morse~20                  ; out              ;
+; |Cau3|curr_morse~21                  ; |Cau3|curr_morse~21                  ; out              ;
+; |Cau3|curr_morse~22                  ; |Cau3|curr_morse~22                  ; out              ;
+; |Cau3|curr_morse~23                  ; |Cau3|curr_morse~23                  ; out              ;
+; |Cau3|curr_morse~30                  ; |Cau3|curr_morse~30                  ; out              ;
+; |Cau3|curr_morse~31                  ; |Cau3|curr_morse~31                  ; out              ;
+; |Cau3|curr_morse~32                  ; |Cau3|curr_morse~32                  ; out              ;
+; |Cau3|curr_morse~33                  ; |Cau3|curr_morse~33                  ; out              ;
+; |Cau3|curr_morse~34                  ; |Cau3|curr_morse~34                  ; out              ;
+; |Cau3|curr_morse~35                  ; |Cau3|curr_morse~35                  ; out              ;
+; |Cau3|bit_count~4                    ; |Cau3|bit_count~4                    ; out              ;
+; |Cau3|curr_morse~43                  ; |Cau3|curr_morse~43                  ; out              ;
+; |Cau3|curr_morse~44                  ; |Cau3|curr_morse~44                  ; out              ;
+; |Cau3|curr_morse~45                  ; |Cau3|curr_morse~45                  ; out              ;
+; |Cau3|curr_morse~46                  ; |Cau3|curr_morse~46                  ; out              ;
+; |Cau3|curr_morse~47                  ; |Cau3|curr_morse~47                  ; out              ;
+; |Cau3|bit_count~8                    ; |Cau3|bit_count~8                    ; out              ;
+; |Cau3|bit_count[3]                   ; |Cau3|bit_count[3]                   ; regout           ;
+; |Cau3|curr_morse[4]                  ; |Cau3|curr_morse[4]                  ; regout           ;
+; |Cau3|curr_morse[3]                  ; |Cau3|curr_morse[3]                  ; regout           ;
+; |Cau3|curr_morse[2]                  ; |Cau3|curr_morse[2]                  ; regout           ;
+; |Cau3|curr_morse[1]                  ; |Cau3|curr_morse[1]                  ; regout           ;
+; |Cau3|SW[0]                          ; |Cau3|SW[0]                          ; out              ;
+; |Cau3|SW[1]                          ; |Cau3|SW[1]                          ; out              ;
+; |Cau3|SW[2]                          ; |Cau3|SW[2]                          ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~0   ; |Cau3|pulse_05s:timer_inst|count~0   ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~1   ; |Cau3|pulse_05s:timer_inst|count~1   ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~2   ; |Cau3|pulse_05s:timer_inst|count~2   ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~3   ; |Cau3|pulse_05s:timer_inst|count~3   ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~4   ; |Cau3|pulse_05s:timer_inst|count~4   ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~5   ; |Cau3|pulse_05s:timer_inst|count~5   ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~6   ; |Cau3|pulse_05s:timer_inst|count~6   ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~7   ; |Cau3|pulse_05s:timer_inst|count~7   ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~8   ; |Cau3|pulse_05s:timer_inst|count~8   ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~9   ; |Cau3|pulse_05s:timer_inst|count~9   ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~10  ; |Cau3|pulse_05s:timer_inst|count~10  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~11  ; |Cau3|pulse_05s:timer_inst|count~11  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~12  ; |Cau3|pulse_05s:timer_inst|count~12  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~13  ; |Cau3|pulse_05s:timer_inst|count~13  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~14  ; |Cau3|pulse_05s:timer_inst|count~14  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~15  ; |Cau3|pulse_05s:timer_inst|count~15  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~16  ; |Cau3|pulse_05s:timer_inst|count~16  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~17  ; |Cau3|pulse_05s:timer_inst|count~17  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~18  ; |Cau3|pulse_05s:timer_inst|count~18  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~19  ; |Cau3|pulse_05s:timer_inst|count~19  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~20  ; |Cau3|pulse_05s:timer_inst|count~20  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~21  ; |Cau3|pulse_05s:timer_inst|count~21  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~22  ; |Cau3|pulse_05s:timer_inst|count~22  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~23  ; |Cau3|pulse_05s:timer_inst|count~23  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count[24] ; |Cau3|pulse_05s:timer_inst|count[24] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[23] ; |Cau3|pulse_05s:timer_inst|count[23] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[22] ; |Cau3|pulse_05s:timer_inst|count[22] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[21] ; |Cau3|pulse_05s:timer_inst|count[21] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[20] ; |Cau3|pulse_05s:timer_inst|count[20] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[19] ; |Cau3|pulse_05s:timer_inst|count[19] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[18] ; |Cau3|pulse_05s:timer_inst|count[18] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[17] ; |Cau3|pulse_05s:timer_inst|count[17] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[16] ; |Cau3|pulse_05s:timer_inst|count[16] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[15] ; |Cau3|pulse_05s:timer_inst|count[15] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[14] ; |Cau3|pulse_05s:timer_inst|count[14] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[13] ; |Cau3|pulse_05s:timer_inst|count[13] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[12] ; |Cau3|pulse_05s:timer_inst|count[12] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[11] ; |Cau3|pulse_05s:timer_inst|count[11] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[10] ; |Cau3|pulse_05s:timer_inst|count[10] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[9]  ; |Cau3|pulse_05s:timer_inst|count[9]  ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[8]  ; |Cau3|pulse_05s:timer_inst|count[8]  ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[7]  ; |Cau3|pulse_05s:timer_inst|count[7]  ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[6]  ; |Cau3|pulse_05s:timer_inst|count[6]  ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[5]  ; |Cau3|pulse_05s:timer_inst|count[5]  ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[4]  ; |Cau3|pulse_05s:timer_inst|count[4]  ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[3]  ; |Cau3|pulse_05s:timer_inst|count[3]  ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[2]  ; |Cau3|pulse_05s:timer_inst|count[2]  ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[1]  ; |Cau3|pulse_05s:timer_inst|count[1]  ; regout           ;
+; |Cau3|Decoder0~0                     ; |Cau3|Decoder0~0                     ; out0             ;
+; |Cau3|Decoder0~1                     ; |Cau3|Decoder0~1                     ; out0             ;
+; |Cau3|Decoder1~0                     ; |Cau3|Decoder1~0                     ; out0             ;
+; |Cau3|Decoder1~1                     ; |Cau3|Decoder1~1                     ; out0             ;
+; |Cau3|Decoder1~2                     ; |Cau3|Decoder1~2                     ; out0             ;
+; |Cau3|Decoder1~3                     ; |Cau3|Decoder1~3                     ; out0             ;
+; |Cau3|Decoder1~4                     ; |Cau3|Decoder1~4                     ; out0             ;
+; |Cau3|Decoder1~5                     ; |Cau3|Decoder1~5                     ; out0             ;
+; |Cau3|Decoder1~6                     ; |Cau3|Decoder1~6                     ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~1    ; |Cau3|pulse_05s:timer_inst|Add0~1    ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~2    ; |Cau3|pulse_05s:timer_inst|Add0~2    ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~3    ; |Cau3|pulse_05s:timer_inst|Add0~3    ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~4    ; |Cau3|pulse_05s:timer_inst|Add0~4    ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~5    ; |Cau3|pulse_05s:timer_inst|Add0~5    ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~6    ; |Cau3|pulse_05s:timer_inst|Add0~6    ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~7    ; |Cau3|pulse_05s:timer_inst|Add0~7    ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~8    ; |Cau3|pulse_05s:timer_inst|Add0~8    ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~9    ; |Cau3|pulse_05s:timer_inst|Add0~9    ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~10   ; |Cau3|pulse_05s:timer_inst|Add0~10   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~11   ; |Cau3|pulse_05s:timer_inst|Add0~11   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~12   ; |Cau3|pulse_05s:timer_inst|Add0~12   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~13   ; |Cau3|pulse_05s:timer_inst|Add0~13   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~14   ; |Cau3|pulse_05s:timer_inst|Add0~14   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~15   ; |Cau3|pulse_05s:timer_inst|Add0~15   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~16   ; |Cau3|pulse_05s:timer_inst|Add0~16   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~17   ; |Cau3|pulse_05s:timer_inst|Add0~17   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~18   ; |Cau3|pulse_05s:timer_inst|Add0~18   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~19   ; |Cau3|pulse_05s:timer_inst|Add0~19   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~20   ; |Cau3|pulse_05s:timer_inst|Add0~20   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~21   ; |Cau3|pulse_05s:timer_inst|Add0~21   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~22   ; |Cau3|pulse_05s:timer_inst|Add0~22   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~23   ; |Cau3|pulse_05s:timer_inst|Add0~23   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~24   ; |Cau3|pulse_05s:timer_inst|Add0~24   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~25   ; |Cau3|pulse_05s:timer_inst|Add0~25   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~26   ; |Cau3|pulse_05s:timer_inst|Add0~26   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~27   ; |Cau3|pulse_05s:timer_inst|Add0~27   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~28   ; |Cau3|pulse_05s:timer_inst|Add0~28   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~29   ; |Cau3|pulse_05s:timer_inst|Add0~29   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~30   ; |Cau3|pulse_05s:timer_inst|Add0~30   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~31   ; |Cau3|pulse_05s:timer_inst|Add0~31   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~32   ; |Cau3|pulse_05s:timer_inst|Add0~32   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~33   ; |Cau3|pulse_05s:timer_inst|Add0~33   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~34   ; |Cau3|pulse_05s:timer_inst|Add0~34   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~35   ; |Cau3|pulse_05s:timer_inst|Add0~35   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~36   ; |Cau3|pulse_05s:timer_inst|Add0~36   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~37   ; |Cau3|pulse_05s:timer_inst|Add0~37   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~38   ; |Cau3|pulse_05s:timer_inst|Add0~38   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~39   ; |Cau3|pulse_05s:timer_inst|Add0~39   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~40   ; |Cau3|pulse_05s:timer_inst|Add0~40   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~41   ; |Cau3|pulse_05s:timer_inst|Add0~41   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~42   ; |Cau3|pulse_05s:timer_inst|Add0~42   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~43   ; |Cau3|pulse_05s:timer_inst|Add0~43   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~44   ; |Cau3|pulse_05s:timer_inst|Add0~44   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~45   ; |Cau3|pulse_05s:timer_inst|Add0~45   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~46   ; |Cau3|pulse_05s:timer_inst|Add0~46   ; out0             ;
+; |Cau3|Equal0~2                       ; |Cau3|Equal0~2                       ; out0             ;
++--------------------------------------+--------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                       ;
++--------------------------------------+--------------------------------------+------------------+
+; Node Name                            ; Output Port Name                     ; Output Port Type ;
++--------------------------------------+--------------------------------------+------------------+
+; |Cau3|WideOr0                        ; |Cau3|WideOr0                        ; out0             ;
+; |Cau3|shift_reg~0                    ; |Cau3|shift_reg~0                    ; out0             ;
+; |Cau3|max_bits~0                     ; |Cau3|max_bits~0                     ; out0             ;
+; |Cau3|WideOr1                        ; |Cau3|WideOr1                        ; out0             ;
+; |Cau3|WideOr2                        ; |Cau3|WideOr2                        ; out0             ;
+; |Cau3|curr_morse~7                   ; |Cau3|curr_morse~7                   ; out              ;
+; |Cau3|curr_morse~8                   ; |Cau3|curr_morse~8                   ; out              ;
+; |Cau3|curr_morse~9                   ; |Cau3|curr_morse~9                   ; out              ;
+; |Cau3|curr_morse~10                  ; |Cau3|curr_morse~10                  ; out              ;
+; |Cau3|curr_morse~11                  ; |Cau3|curr_morse~11                  ; out              ;
+; |Cau3|curr_morse[0]                  ; |Cau3|curr_morse[0]                  ; regout           ;
+; |Cau3|curr_morse~18                  ; |Cau3|curr_morse~18                  ; out              ;
+; |Cau3|curr_morse~19                  ; |Cau3|curr_morse~19                  ; out              ;
+; |Cau3|curr_morse~20                  ; |Cau3|curr_morse~20                  ; out              ;
+; |Cau3|curr_morse~21                  ; |Cau3|curr_morse~21                  ; out              ;
+; |Cau3|curr_morse~22                  ; |Cau3|curr_morse~22                  ; out              ;
+; |Cau3|curr_morse~23                  ; |Cau3|curr_morse~23                  ; out              ;
+; |Cau3|curr_morse~30                  ; |Cau3|curr_morse~30                  ; out              ;
+; |Cau3|curr_morse~31                  ; |Cau3|curr_morse~31                  ; out              ;
+; |Cau3|curr_morse~32                  ; |Cau3|curr_morse~32                  ; out              ;
+; |Cau3|curr_morse~33                  ; |Cau3|curr_morse~33                  ; out              ;
+; |Cau3|curr_morse~34                  ; |Cau3|curr_morse~34                  ; out              ;
+; |Cau3|curr_morse~35                  ; |Cau3|curr_morse~35                  ; out              ;
+; |Cau3|bit_count~4                    ; |Cau3|bit_count~4                    ; out              ;
+; |Cau3|curr_morse~43                  ; |Cau3|curr_morse~43                  ; out              ;
+; |Cau3|curr_morse~44                  ; |Cau3|curr_morse~44                  ; out              ;
+; |Cau3|curr_morse~45                  ; |Cau3|curr_morse~45                  ; out              ;
+; |Cau3|curr_morse~46                  ; |Cau3|curr_morse~46                  ; out              ;
+; |Cau3|curr_morse~47                  ; |Cau3|curr_morse~47                  ; out              ;
+; |Cau3|bit_count~8                    ; |Cau3|bit_count~8                    ; out              ;
+; |Cau3|bit_count[3]                   ; |Cau3|bit_count[3]                   ; regout           ;
+; |Cau3|curr_morse[4]                  ; |Cau3|curr_morse[4]                  ; regout           ;
+; |Cau3|curr_morse[3]                  ; |Cau3|curr_morse[3]                  ; regout           ;
+; |Cau3|curr_morse[2]                  ; |Cau3|curr_morse[2]                  ; regout           ;
+; |Cau3|curr_morse[1]                  ; |Cau3|curr_morse[1]                  ; regout           ;
+; |Cau3|KEY[0]                         ; |Cau3|KEY[0]                         ; out              ;
+; |Cau3|SW[0]                          ; |Cau3|SW[0]                          ; out              ;
+; |Cau3|SW[1]                          ; |Cau3|SW[1]                          ; out              ;
+; |Cau3|SW[2]                          ; |Cau3|SW[2]                          ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~0   ; |Cau3|pulse_05s:timer_inst|count~0   ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~1   ; |Cau3|pulse_05s:timer_inst|count~1   ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~2   ; |Cau3|pulse_05s:timer_inst|count~2   ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~3   ; |Cau3|pulse_05s:timer_inst|count~3   ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~4   ; |Cau3|pulse_05s:timer_inst|count~4   ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~5   ; |Cau3|pulse_05s:timer_inst|count~5   ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~6   ; |Cau3|pulse_05s:timer_inst|count~6   ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~7   ; |Cau3|pulse_05s:timer_inst|count~7   ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~8   ; |Cau3|pulse_05s:timer_inst|count~8   ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~9   ; |Cau3|pulse_05s:timer_inst|count~9   ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~10  ; |Cau3|pulse_05s:timer_inst|count~10  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~11  ; |Cau3|pulse_05s:timer_inst|count~11  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~12  ; |Cau3|pulse_05s:timer_inst|count~12  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~13  ; |Cau3|pulse_05s:timer_inst|count~13  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~14  ; |Cau3|pulse_05s:timer_inst|count~14  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~15  ; |Cau3|pulse_05s:timer_inst|count~15  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~16  ; |Cau3|pulse_05s:timer_inst|count~16  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~17  ; |Cau3|pulse_05s:timer_inst|count~17  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~18  ; |Cau3|pulse_05s:timer_inst|count~18  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~19  ; |Cau3|pulse_05s:timer_inst|count~19  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~20  ; |Cau3|pulse_05s:timer_inst|count~20  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~21  ; |Cau3|pulse_05s:timer_inst|count~21  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~22  ; |Cau3|pulse_05s:timer_inst|count~22  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count~23  ; |Cau3|pulse_05s:timer_inst|count~23  ; out              ;
+; |Cau3|pulse_05s:timer_inst|count[24] ; |Cau3|pulse_05s:timer_inst|count[24] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[23] ; |Cau3|pulse_05s:timer_inst|count[23] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[22] ; |Cau3|pulse_05s:timer_inst|count[22] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[21] ; |Cau3|pulse_05s:timer_inst|count[21] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[20] ; |Cau3|pulse_05s:timer_inst|count[20] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[19] ; |Cau3|pulse_05s:timer_inst|count[19] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[18] ; |Cau3|pulse_05s:timer_inst|count[18] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[17] ; |Cau3|pulse_05s:timer_inst|count[17] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[16] ; |Cau3|pulse_05s:timer_inst|count[16] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[15] ; |Cau3|pulse_05s:timer_inst|count[15] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[14] ; |Cau3|pulse_05s:timer_inst|count[14] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[13] ; |Cau3|pulse_05s:timer_inst|count[13] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[12] ; |Cau3|pulse_05s:timer_inst|count[12] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[11] ; |Cau3|pulse_05s:timer_inst|count[11] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[10] ; |Cau3|pulse_05s:timer_inst|count[10] ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[9]  ; |Cau3|pulse_05s:timer_inst|count[9]  ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[8]  ; |Cau3|pulse_05s:timer_inst|count[8]  ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[7]  ; |Cau3|pulse_05s:timer_inst|count[7]  ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[6]  ; |Cau3|pulse_05s:timer_inst|count[6]  ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[5]  ; |Cau3|pulse_05s:timer_inst|count[5]  ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[4]  ; |Cau3|pulse_05s:timer_inst|count[4]  ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[3]  ; |Cau3|pulse_05s:timer_inst|count[3]  ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[2]  ; |Cau3|pulse_05s:timer_inst|count[2]  ; regout           ;
+; |Cau3|pulse_05s:timer_inst|count[1]  ; |Cau3|pulse_05s:timer_inst|count[1]  ; regout           ;
+; |Cau3|Decoder0~0                     ; |Cau3|Decoder0~0                     ; out0             ;
+; |Cau3|Decoder0~1                     ; |Cau3|Decoder0~1                     ; out0             ;
+; |Cau3|Decoder1~0                     ; |Cau3|Decoder1~0                     ; out0             ;
+; |Cau3|Decoder1~1                     ; |Cau3|Decoder1~1                     ; out0             ;
+; |Cau3|Decoder1~2                     ; |Cau3|Decoder1~2                     ; out0             ;
+; |Cau3|Decoder1~3                     ; |Cau3|Decoder1~3                     ; out0             ;
+; |Cau3|Decoder1~4                     ; |Cau3|Decoder1~4                     ; out0             ;
+; |Cau3|Decoder1~5                     ; |Cau3|Decoder1~5                     ; out0             ;
+; |Cau3|Decoder1~6                     ; |Cau3|Decoder1~6                     ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~1    ; |Cau3|pulse_05s:timer_inst|Add0~1    ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~2    ; |Cau3|pulse_05s:timer_inst|Add0~2    ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~3    ; |Cau3|pulse_05s:timer_inst|Add0~3    ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~4    ; |Cau3|pulse_05s:timer_inst|Add0~4    ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~5    ; |Cau3|pulse_05s:timer_inst|Add0~5    ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~6    ; |Cau3|pulse_05s:timer_inst|Add0~6    ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~7    ; |Cau3|pulse_05s:timer_inst|Add0~7    ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~8    ; |Cau3|pulse_05s:timer_inst|Add0~8    ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~9    ; |Cau3|pulse_05s:timer_inst|Add0~9    ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~10   ; |Cau3|pulse_05s:timer_inst|Add0~10   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~11   ; |Cau3|pulse_05s:timer_inst|Add0~11   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~12   ; |Cau3|pulse_05s:timer_inst|Add0~12   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~13   ; |Cau3|pulse_05s:timer_inst|Add0~13   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~14   ; |Cau3|pulse_05s:timer_inst|Add0~14   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~15   ; |Cau3|pulse_05s:timer_inst|Add0~15   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~16   ; |Cau3|pulse_05s:timer_inst|Add0~16   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~17   ; |Cau3|pulse_05s:timer_inst|Add0~17   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~18   ; |Cau3|pulse_05s:timer_inst|Add0~18   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~19   ; |Cau3|pulse_05s:timer_inst|Add0~19   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~20   ; |Cau3|pulse_05s:timer_inst|Add0~20   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~21   ; |Cau3|pulse_05s:timer_inst|Add0~21   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~22   ; |Cau3|pulse_05s:timer_inst|Add0~22   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~23   ; |Cau3|pulse_05s:timer_inst|Add0~23   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~24   ; |Cau3|pulse_05s:timer_inst|Add0~24   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~25   ; |Cau3|pulse_05s:timer_inst|Add0~25   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~26   ; |Cau3|pulse_05s:timer_inst|Add0~26   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~27   ; |Cau3|pulse_05s:timer_inst|Add0~27   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~28   ; |Cau3|pulse_05s:timer_inst|Add0~28   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~29   ; |Cau3|pulse_05s:timer_inst|Add0~29   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~30   ; |Cau3|pulse_05s:timer_inst|Add0~30   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~31   ; |Cau3|pulse_05s:timer_inst|Add0~31   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~32   ; |Cau3|pulse_05s:timer_inst|Add0~32   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~33   ; |Cau3|pulse_05s:timer_inst|Add0~33   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~34   ; |Cau3|pulse_05s:timer_inst|Add0~34   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~35   ; |Cau3|pulse_05s:timer_inst|Add0~35   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~36   ; |Cau3|pulse_05s:timer_inst|Add0~36   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~37   ; |Cau3|pulse_05s:timer_inst|Add0~37   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~38   ; |Cau3|pulse_05s:timer_inst|Add0~38   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~39   ; |Cau3|pulse_05s:timer_inst|Add0~39   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~40   ; |Cau3|pulse_05s:timer_inst|Add0~40   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~41   ; |Cau3|pulse_05s:timer_inst|Add0~41   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~42   ; |Cau3|pulse_05s:timer_inst|Add0~42   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~43   ; |Cau3|pulse_05s:timer_inst|Add0~43   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~44   ; |Cau3|pulse_05s:timer_inst|Add0~44   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~45   ; |Cau3|pulse_05s:timer_inst|Add0~45   ; out0             ;
+; |Cau3|pulse_05s:timer_inst|Add0~46   ; |Cau3|pulse_05s:timer_inst|Add0~46   ; out0             ;
+; |Cau3|Equal0~2                       ; |Cau3|Equal0~2                       ; out0             ;
++--------------------------------------+--------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Mon Apr 20 10:55:56 2026
+Info: Command: quartus_sim --simulation_results_format=VWF Lab3 -c Lab3
+Info (324025): Using vector source file "D:/Study_project/HDL/Lab3/Morse.vwf"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      33.18 %
+Info (328052): Number of transitions in simulation is 1184
+Info (324045): Vector file Lab3.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4454 megabytes
+    Info: Processing ended: Mon Apr 20 10:55:56 2026
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

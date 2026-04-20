@@ -1,0 +1,51 @@
+module SequenceDetector (
+    input clk,      // Xung đồng hồ
+    input reset,    // Reset hệ thống (active high)
+    input x,        // Ngõ vào dữ liệu
+    output reg z    // Ngõ ra phát hiện chuỗi
+);
+
+    // Định nghĩa các trạng thái
+    parameter S0 = 3'b000, 
+              A1 = 3'b001, A2 = 3'b010, A3 = 3'b011, // Nhánh số 1
+              B1 = 3'b100, B2 = 3'b101, B3 = 3'b110; // Nhánh số 0
+
+    reg [2:0] current_state, next_state;
+
+    // 1. Chuyển đổi trạng thái (Sequential Logic)
+    always @(posedge clk or posedge reset) begin
+        if (reset)
+            current_state <= S0;
+        else
+            current_state <= next_state;
+    end
+
+    // 2. Logic trạng thái kế tiếp (Combinational Logic)
+    always @(*) begin
+        case (current_state)
+            S0: next_state = x ? A1 : B1;
+
+            // Nhánh phát hiện chuỗi 1111
+            A1: next_state = x ? A2 : B1;
+            A2: next_state = x ? A3 : B1;
+            A3: next_state = x ? A3 : B1; // Duy trì ở A3 để hỗ trợ overlapping
+
+            // Nhánh phát hiện chuỗi 0000
+            B1: next_state = x ? A1 : B2;
+            B2: next_state = x ? A1 : B3;
+            B3: next_state = x ? A1 : B3; // Duy trì ở B3 để hỗ trợ overlapping
+
+            default: next_state = S0;
+        endcase
+    end
+
+    // 3. Logic ngõ ra (Mealy: ngõ ra phụ thuộc vào trạng thái hiện tại và ngõ vào)
+    always @(*) begin
+        case (current_state)
+            A3: z = x ? 1'b1 : 1'b0; // Nếu đang ở A3 và nhận thêm x=1 -> đủ 4 số 1
+            B3: z = x ? 1'b0 : 1'b1; // Nếu đang ở B3 và nhận thêm x=0 -> đủ 4 số 0
+            default: z = 1'b0;
+        endcase
+    end
+
+endmodule

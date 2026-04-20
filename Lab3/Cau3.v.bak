@@ -1,0 +1,74 @@
+module Cau3 (
+    input CLOCK_50,
+    input [0:0] KEY, // KEY0 làm Reset (active-low)
+    input [1:1] KEY_START, // KEY1 làm Start (active-low)
+    input [2:0] SW,
+    output reg LEDR0
+);
+    wire en;
+    // Gọi module 0.5s
+    pulse_05s timer_inst (
+        .clk(CLOCK_50),
+        .rst_n(KEY[0]),
+        .pulse(en)
+    );
+
+    // FSM States
+    localparam IDLE = 1'b0;
+    localparam SEND = 1'b1;
+
+    reg state;
+    reg [11:0] shift_reg;
+    reg [3:0] bit_count;
+    reg [3:0] max_bits;
+
+    // Bảng mã hóa (Look-up Table)
+    always @(*) begin
+        case(SW)
+            3'b000: begin shift_reg = 12'b101110000000; max_bits = 5;  end // A: .- (1 0 111)
+            3'b001: begin shift_reg = 12'b111010101000; max_bits = 9;  end // B: -...
+            3'b010: begin shift_reg = 12'b111010111010; max_bits = 11; end // C: -.-.
+            3'b011: begin shift_reg = 12'b111010100000; max_bits = 7;  end // D: -..
+            3'b100: begin shift_reg = 12'b100000000000; max_bits = 1;  end // E: .
+            3'b101: begin shift_reg = 12'b101011101000; max_bits = 9;  end // F: ..-.
+            3'b110: begin shift_reg = 12'b111011101000; max_bits = 9;  end // G: --.
+            3'b111: begin shift_reg = 12'b101010100000; max_bits = 7;  end // H: ....
+            default:begin shift_reg = 12'b000000000000; max_bits = 0;  end
+        endcase
+    end
+
+    reg [11:0] current_pattern;
+
+    // FSM Logic
+    always @(posedge CLOCK_50 or negedge KEY[0]) begin
+        if (!KEY[0]) begin
+            state <= IDLE;
+            LEDR0 <= 0;
+            bit_count <= 0;
+        end else begin
+            case (state)
+                IDLE: begin
+                    LEDR0 <= 0;
+                    bit_count <= 0;
+                    if (!KEY_START[1]) begin // Khi nhấn nút Start
+                        current_pattern <= shift_reg;
+                        state <= SEND;
+                    end
+                end
+
+                SEND: begin
+                    // QUAN TRỌNG: Chỉ thay đổi khi có xung enable 0.5s
+                    if (en) begin
+                        LEDR0 <= current_pattern[11]; // Xuất bit cao nhất ra LED
+                        if (bit_count >= max_bits - 1) begin
+                            state <= IDLE;
+                        end else begin
+                            current_pattern <= {current_pattern[10:0], 1'b0}; // Dịch trái
+                            bit_count <= bit_count + 1;
+                        end
+                    end
+                end
+            endcase
+        end
+    end
+endmodule

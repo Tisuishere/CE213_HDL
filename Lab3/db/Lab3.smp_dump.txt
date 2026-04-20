@@ -1,0 +1,11 @@
+
+State Machine - |Cau1|curr
+Name curr.111 curr.110 curr.101 curr.100 curr.011 curr.010 curr.001 curr.000 
+curr.000 0 0 0 0 0 0 0 0 
+curr.001 0 0 0 0 0 0 1 1 
+curr.010 0 0 0 0 0 1 0 1 
+curr.011 0 0 0 0 1 0 0 1 
+curr.100 0 0 0 1 0 0 0 1 
+curr.101 0 0 1 0 0 0 0 1 
+curr.110 0 1 0 0 0 0 0 1 
+curr.111 1 0 0 0 0 0 0 1 

@@ -1,0 +1,15 @@
+module Cau2 (
+	input CLOCK_50,
+	output NS_R, NS_Y, NS_G, EW_R, EW_Y, EW_G
+);
+
+	wire clk_1s_wire;
+	
+	clock_1s count1s (.CLOCK_50(CLOCK_50), .clock_1s(clk_1s_wire));
+	traffic_light tfl (
+		.clk_1s(clk_1s_wire),
+		.NS_R(NS_R), .NS_Y(NS_Y), .NS_G(NS_G),
+		.EW_R(EW_R), .EW_Y(EW_Y), .EW_G(EW_G)
+	);
+endmodule
+	

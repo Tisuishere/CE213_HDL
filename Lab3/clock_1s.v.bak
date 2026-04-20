@@ -1,0 +1,17 @@
+module clock_1s (
+	input wire CLOCK_50,
+	output reg clock_1s
+);
+	reg [25:0] count;
+	always @(posedge CLOCK_50) begin
+		if (count == 26'd4) begin
+			count <= 26'd0;
+			clock_1s <= 1'b1;
+		end
+		else begin
+			count <= count + 1'b1;
+			clock_1s <= 1'b0;
+		end
+	end
+endmodule
+	
