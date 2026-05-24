@@ -1,0 +1,65 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\HDL\Lab4\CAU6\simulation\modelsim
+vhex_decoder
+IB1a@Dl]n31F^OWXWJ7BmJ0
+V4Ek^?CLYFTU040CQAi@o20
+Z1 dD:\HDL\Lab4\CAU6\simulation\modelsim
+w1776479491
+8D:/HDL/Lab4/CAU6/hex_decoder.v
+FD:/HDL/Lab4/CAU6/hex_decoder.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+D:/HDL/Lab4/CAU6 -O0
+!i10b 1
+!s100 <A]G<?hCi:OH^c<`1UaD31
+!s85 0
+!s108 1777964186.476000
+!s107 D:/HDL/Lab4/CAU6/hex_decoder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/HDL/Lab4/CAU6|D:/HDL/Lab4/CAU6/hex_decoder.v|
+!s101 -O0
+vsram_interface
+IB6acF`WMQHQWe5WzkJR`d1
+VB@_1?fYI;8FTCBNFg2JbU3
+R1
+w1777963842
+8D:/HDL/Lab4/CAU6/sram_interface.v
+FD:/HDL/Lab4/CAU6/sram_interface.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 R:K_=WIO>;k9`G<^QNcmI1
+!s85 0
+!s108 1777964186.418000
+!s107 D:/HDL/Lab4/CAU6/sram_interface.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/HDL/Lab4/CAU6|D:/HDL/Lab4/CAU6/sram_interface.v|
+!s101 -O0
+vtb
+!i10b 1
+!s100 6Inm=Acnc6dH55NGX>;gd0
+IZDC5:N=8ULL`OX=D63m=61
+VV@Xn<HnSRM[I5c1?BH]3a3
+R1
+w1777964039
+8D:/HDL/Lab4/CAU6/tb.v
+FD:/HDL/Lab4/CAU6/tb.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1777964186.534000
+!s107 D:/HDL/Lab4/CAU6/tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/HDL/Lab4/CAU6|D:/HDL/Lab4/CAU6/tb.v|
+!s101 -O0
+R3
+R4

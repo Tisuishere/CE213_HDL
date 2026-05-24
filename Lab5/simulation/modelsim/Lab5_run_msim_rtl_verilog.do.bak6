@@ -1,0 +1,22 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+D:/Study_project/HDL/Lab5 {D:/Study_project/HDL/Lab5/RegisterFile.v}
+vlog -vlog01compat -work work +incdir+D:/Study_project/HDL/Lab5 {D:/Study_project/HDL/Lab5/ALU_32bit.v}
+vlog -vlog01compat -work work +incdir+D:/Study_project/HDL/Lab5 {D:/Study_project/HDL/Lab5/Dual_Port_Ram.v}
+vlog -vlog01compat -work work +incdir+D:/Study_project/HDL/Lab5 {D:/Study_project/HDL/Lab5/Datapath.v}
+vlog -vlog01compat -work work +incdir+D:/Study_project/HDL/Lab5 {D:/Study_project/HDL/Lab5/ALU_Control.v}
+vlog -vlog01compat -work work +incdir+D:/Study_project/HDL/Lab5 {D:/Study_project/HDL/Lab5/Control_Unit.v}
+
+vlog -vlog01compat -work work +incdir+D:/Study_project/HDL/Lab5 {D:/Study_project/HDL/Lab5/tb_Datapath.v}
+
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs="+acc"  tb_Datapath
+
+add wave *
+view structure
+view signals
+run -all

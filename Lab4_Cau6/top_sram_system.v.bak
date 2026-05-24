@@ -1,0 +1,49 @@
+module top_sram_system (
+    input        KEY0,
+    input        KEY1,
+    input [15:0] SW,
+    output [6:0] HEX0,
+    output [6:0] HEX1,
+    output [6:0] HEX2,
+    output [6:0] HEX3
+);
+
+    // internal wires (the "PCB traces")
+    wire [15:0] SRAM_DQ;
+    wire [17:0] SRAM_ADDR;
+    wire SRAM_CE_N, SRAM_OE_N, SRAM_WE_N;
+    wire SRAM_LB_N, SRAM_UB_N;
+
+    // =========================
+    // DUT
+    // =========================
+    sram_interface dut (
+        .KEY0(KEY0),
+        .KEY1(KEY1),
+        .SW(SW),
+        .HEX0(HEX0),
+        .HEX1(HEX1),
+        .HEX2(HEX2),
+        .HEX3(HEX3),
+
+        .SRAM_DQ(SRAM_DQ),
+        .SRAM_ADDR(SRAM_ADDR),
+        .SRAM_CE_N(SRAM_CE_N),
+        .SRAM_OE_N(SRAM_OE_N),
+        .SRAM_WE_N(SRAM_WE_N),
+        .SRAM_LB_N(SRAM_LB_N),
+        .SRAM_UB_N(SRAM_UB_N)
+    );
+
+    // =========================
+    // SRAM MODEL
+    // =========================
+    my_sram mem (
+        .CE_N(SRAM_CE_N),
+        .OE_N(SRAM_OE_N),
+        .WE_N(SRAM_WE_N),
+        .ADDR(SRAM_ADDR),
+        .DQ(SRAM_DQ)
+    );
+
+endmodule

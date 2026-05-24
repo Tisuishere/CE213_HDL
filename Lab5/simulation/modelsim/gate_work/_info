@@ -1,0 +1,47 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Study_project\HDL\Lab5\simulation\modelsim
+vDatapath
+I9C3O;k9Ld`829R2[NlTVC3
+Vm?N[3KzdjgBDN@=?f14^z1
+Z1 dD:\Study_project\HDL\Lab5\simulation\modelsim
+w1779341370
+8Lab5.vo
+FLab5.vo
+L0 31
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+n@datapath
+!i10b 1
+!s100 cl];1Dan3<BOA0<Mc[Uka2
+!s85 0
+!s108 1779341424.115000
+!s107 Lab5.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|Lab5.vo|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+. -O0
+vtb_Datapath
+!i10b 1
+!s100 NeORE:zTVYkNRRg66KO=?0
+IZcFNhE`oTY`aFLfPSWNM]2
+VHD=Q9e5Qc1NjNF3kNGo=J0
+R1
+w1779177155
+8D:/Study_project/HDL/Lab5/tb_Datapath.v
+FD:/Study_project/HDL/Lab5/tb_Datapath.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1779341425.668000
+!s107 D:/Study_project/HDL/Lab5/tb_Datapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study_project/HDL/Lab5|D:/Study_project/HDL/Lab5/tb_Datapath.v|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+D:/Study_project/HDL/Lab5 -O0
+ntb_@datapath

@@ -1,0 +1,64 @@
+`timescale 1ns/1ps
+
+module tb_Datapath();
+
+    reg clk;
+    reg rst_n;
+    reg [31:0] Instruction;
+
+    // Khởi tạo module Datapath
+    Datapath dut (
+        .clk(clk),
+        .rst_n(rst_n),
+        .Instruction(Instruction)
+    );
+
+    // Tạo Clock
+    initial begin
+        clk = 0;
+        forever #5 clk = ~clk; // Chu kỳ 10ns
+    end
+
+    // Kịch bản test
+    initial begin
+        // Reset hệ thống
+        rst_n = 0;
+        Instruction = 32'b0;
+        #10;
+        rst_n = 1;
+        
+        // --- CHUẨN BỊ MÔI TRƯỜNG ---
+        // Ép dữ liệu (Backdoor Write) vào Register File để có toán hạng test
+        dut.rf.rf[2] = 32'd10; // Đặt giá trị $2 = 10 (base address)
+        dut.rf.rf[3] = 32'd40; // Đặt giá trị $3 = 40 (giá trị để cộng)
+        #10;
+
+        // --- TEST CASE 1: Lệnh add $1, $2, $3 ---
+        // Cú pháp: opcode=000001, rs=$2 (00010), rt=$3 (00011), rd=$1 (00001)
+        // Kết quả mong muốn: $1 = $2 + $3 = 10 + 40 = 50
+        Instruction = {6'b000001, 5'd2, 5'd3, 5'd1, 5'd0, 6'd0};
+        #10;
+        $display("Sau lenh ADD: Thanh ghi $1 = %d", dut.rf.rf[1]);
+
+        // --- TEST CASE 2: Lệnh sw $1, 0($2) ---
+        // Cú pháp: opcode=000010, rs=$2 (00010), rt=$1 (00001), imm=0
+        // Kết quả mong muốn: Ghi giá trị của $1 (là 50) vào RAM ở địa chỉ bằng $2 (là 10)
+        Instruction = {6'b000010, 5'd2, 5'd1, 16'd0};
+        #10;
+        $display("Sau lenh SW: RAM tai dia chi 10 = %d", dut.dmem.ram[10]);
+
+        // Xóa tạm $1 để kiểm chứng lệnh LW nạp đúng
+        dut.rf.rf[1] = 32'd0; 
+        #10;
+
+        // --- TEST CASE 3: Lệnh lw $1, 0($2) ---
+        // Cú pháp: opcode=000100, rs=$2 (00010), rt=$1 (00001), imm=0
+        // Kết quả mong muốn: Đọc giá trị từ RAM ở địa chỉ $2 (là 10) vào $1 (kỳ vọng $1=50)
+        Instruction = {6'b000100, 5'd2, 5'd1, 16'd0};
+        #10; // Đợi qua 1 sườn lên của clock để ghi vào Reg
+        $display("Sau lenh LW: Thanh ghi $1 = %d", dut.rf.rf[1]);
+
+        #20 $finish; // Kết thúc mô phỏng
+    end
+
+endmodule

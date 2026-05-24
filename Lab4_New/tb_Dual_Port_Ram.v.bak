@@ -1,0 +1,66 @@
+`timescale 1ns / 1ps  
+
+module tb_Dual_Port_Ram;
+    reg clk;
+    reg [9:0] Address;
+    reg [7:0] WriteData;
+    reg WriteEn;
+    reg ReadEn;
+    wire [7:0] ReadData;
+
+    Dual_Port_Ram dut (
+        .clk(clk),
+        .Address(Address),
+        .WriteData(WriteData),
+        .WriteEn(WriteEn),
+        .ReadEn(ReadEn),
+        .ReadData(ReadData)
+    );
+
+    always begin
+        #5 clk = ~clk;
+    end
+
+    // 4. K?ch b?n mô ph?ng
+    initial begin
+        clk = 0;
+        Address = 0;
+        WriteData = 0;
+        WriteEn = 0;
+        ReadEn = 0;
+        //#20;
+	// Ghi du lieu
+        @(posedge clk);
+        Address = 10'd10; WriteData = 8'hAA; WriteEn = 1;
+        
+        @(posedge clk);
+        Address = 10'd255; WriteData = 8'h55; WriteEn = 1;
+
+        @(posedge clk);
+        Address = 10'd1023; WriteData = 8'hFF; WriteEn = 1;
+
+        @(posedge clk);
+        WriteEn = 0; // Dung ghi
+        #20;
+	// Doc du lieu
+
+        @(posedge clk);
+        Address = 10'd10; ReadEn = 1;
+        @(posedge clk); 
+        
+        @(posedge clk);
+        Address = 10'd255; ReadEn = 1;
+        @(posedge clk);
+
+        @(posedge clk);
+        Address = 10'd1023; ReadEn = 1;
+        @(posedge clk);
+
+
+        @(posedge clk);
+        ReadEn = 0;
+
+        #20;
+        $finish;
+    end
+endmodule

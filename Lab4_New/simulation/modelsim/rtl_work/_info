@@ -1,0 +1,47 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Study_project\HDL\Lab4_New\simulation\modelsim
+vALU_32bit
+I<:IH9NnM6KzGEFoM8[V831
+VJjzaGioWN29TAa>JQ<cJl0
+Z1 dD:\Study_project\HDL\Lab4_New\simulation\modelsim
+w1776645787
+8D:/Study_project/HDL/Lab4_New/ALU_32bit.v
+FD:/Study_project/HDL/Lab4_New/ALU_32bit.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+n@a@l@u_32bit
+!i10b 1
+!s100 PVjB91D?fZ`O[alG=R47l1
+!s85 0
+!s108 1779174272.158000
+!s107 D:/Study_project/HDL/Lab4_New/ALU_32bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study_project/HDL/Lab4_New|D:/Study_project/HDL/Lab4_New/ALU_32bit.v|
+!s101 -O0
+Z4 !s92 -vlog01compat -work work +incdir+D:/Study_project/HDL/Lab4_New -O0
+vtb_ALU_32bit
+!i10b 1
+!s100 YFYz=fd?WA7^NLi=;k]AE2
+IW08mNTm<[ho@0o=^>Zljl3
+VRB<?WR4LV?PL]_4^Ah9751
+R1
+w1778569989
+8D:/Study_project/HDL/Lab4_New/tb_ALU_32bit.v
+FD:/Study_project/HDL/Lab4_New/tb_ALU_32bit.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1779174272.328000
+!s107 D:/Study_project/HDL/Lab4_New/tb_ALU_32bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study_project/HDL/Lab4_New|D:/Study_project/HDL/Lab4_New/tb_ALU_32bit.v|
+!s101 -O0
+R3
+R4
+ntb_@a@l@u_32bit

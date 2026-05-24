@@ -1,0 +1,68 @@
+`timescale 1ns/1ps
+
+module tb_Single_Port_Ram_SelfCheck();
+    reg clock, cs, wr_e, oe;
+    reg [6:0] addr;
+    wire [7:0] data;
+    reg [7:0] data_in;
+    
+    integer i;
+    reg [7:0] expected_data;
+    integer errors = 0;
+
+    Single_Port_Ram uut (
+        .clock(clock), .cs(cs), .wr_e(wr_e), .oe(oe), .addr(addr), .data(data)
+    );
+
+    assign data = (cs && wr_e) ? data_in : 8'hzz;
+
+    always #5 clock = ~clock;
+
+    task write_mem(input [6:0] a, input [7:0] d);
+        begin
+            @(negedge clock);
+            cs = 1; wr_e = 1; oe = 0;
+            addr = a; data_in = d;
+        end
+    endtask
+
+    task read_and_check(input [6:0] a, input [7:0] expected);
+        begin
+            @(negedge clock);
+            cs = 1; wr_e = 0; oe = 1;
+            addr = a;
+            @(posedge clock); 
+            #1; 
+            if (data !== expected) begin
+                $display("TIME: %t | ERROR: Addr %h | Got %h | Expected %h", $time, a, data, expected);
+                errors = errors + 1;
+            end else begin
+                $display("TIME: %t | PASS: Addr %h | Data %h", $time, a, data);
+            end
+        end
+    endtask
+
+    initial begin
+        clock = 0; cs = 0; wr_e = 0; oe = 0; addr = 0; data_in = 0;
+        #20;
+
+        $display("Self Checking");
+
+        for (i = 0; i < 10; i = i + 1) begin
+            write_mem(i, i + 8'h10); 
+        end
+
+        for (i = 0; i < 10; i = i + 1) begin
+            read_and_check(i, i + 8'h10);
+        end
+
+        // 3. T?ng k?t
+        if (errors == 0)
+            $display("Khong phat sinh loi");
+        else
+            $display("Ton tai %d loi", errors);
+
+        #20;
+        $finish;
+    end
+endmodule

@@ -1,0 +1,84 @@
+`timescale 1ns / 1ps
+
+module tb_RegisterFile;
+    reg         clk;
+    reg         rst_n;
+    reg  [4:0]  ReadAddress1;
+    reg  [4:0]  ReadAddress2;
+    reg  [4:0]  WriteAddress;
+    reg  [31:0] WriteData;
+    reg         WriteEn;
+
+    wire [31:0] ReadData1;
+    wire [31:0] ReadData2;
+
+    RegisterFile uut (
+        .clk(clk),
+        .rst_n(rst_n),
+        .ReadAddress1(ReadAddress1),
+        .ReadAddress2(ReadAddress2),
+        .WriteAddress(WriteAddress),
+        .WriteData(WriteData),
+        .WriteEn(WriteEn),
+        .ReadData1(ReadData1),
+        .ReadData2(ReadData2)
+    );
+
+    always #5 clk = ~clk;
+
+    initial begin
+        clk = 0;
+        rst_n = 0;
+        WriteEn = 0;
+        WriteAddress = 0;
+        WriteData = 0;
+        ReadAddress1 = 0;
+        ReadAddress2 = 0;
+
+        #15 rst_n = 1;
+        //Ghi du lieu vao thanh ghi so 1
+        @(posedge clk);
+        WriteEn = 1;
+        WriteAddress = 5'd1;
+        WriteData = 32'hAAAA_BBBB;
+        
+        //Ghi du lieu vao thanh ghi so 5 ---
+        @(posedge clk);
+        WriteAddress = 5'd5;
+        WriteData = 32'h1234_5678;
+
+        //Ghi du lieu vao thanh ghi so 31
+        @(posedge clk);
+        WriteAddress = 5'd31;
+        WriteData = 32'hAAAA_0000;
+        
+
+        //Doc du lieu tu Port 1 va Port 2
+        //Doc thanh ghi 1 va 5
+        //Dung ghi
+        #10;
+        WriteEn = 0;
+        ReadAddress1 = 5'd1;
+        ReadAddress2 = 5'd5;
+        #5;
+        $display("Read R1: %h (Expected: AAAABBBB)", ReadData1);
+        $display("Read R5: %h (Expected: 12345678)", ReadData2);
+
+        // Doc thanh ghi 31 va 0
+        #10;
+        ReadAddress1 = 5'd31;
+        ReadAddress2 = 5'd0;
+        #5;
+        $display("Read R31: %h (Expected: AAAA0000)", ReadData1);
+        $display("Read R0:  %h (Expected: 00000000)", ReadData2);
+        #10
+        //Kiem tra ghi va doc dong thoi
+        @(posedge clk);
+        WriteEn = 1;
+        WriteAddress = 5'd10;
+        WriteData = 32'hCAFE_BABE;
+        ReadAddress1 = 5'd10; //Doc ngay tai dia chi dang ghi
+	#50
+        $stop;
+    end
+endmodule

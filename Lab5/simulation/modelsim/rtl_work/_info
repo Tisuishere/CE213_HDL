@@ -1,0 +1,152 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Study_project\HDL\Lab5\simulation\modelsim
+vALU_32bit
+IMf90l[[6Ccma]4i@I3P@X1
+VJjzaGioWN29TAa>JQ<cJl0
+Z1 dD:\Study_project\HDL\Lab5\simulation\modelsim
+w1778553710
+8D:/Study_project/HDL/Lab5/ALU_32bit.v
+FD:/Study_project/HDL/Lab5/ALU_32bit.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+D:/Study_project/HDL/Lab5 -O0
+n@a@l@u_32bit
+!i10b 1
+!s100 ea1fT[0z6ONFE7JWi7A8W3
+!s85 0
+!s108 1779341532.870000
+!s107 D:/Study_project/HDL/Lab5/ALU_32bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study_project/HDL/Lab5|D:/Study_project/HDL/Lab5/ALU_32bit.v|
+!s101 -O0
+vALU_Control
+I1moE<7oFFM_GOam[z0=iJ0
+VV^Y>bTi354ZI@GBzI;89^1
+R1
+w1778553750
+8D:/Study_project/HDL/Lab5/ALU_Control.v
+FD:/Study_project/HDL/Lab5/ALU_Control.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@a@l@u_@control
+!i10b 1
+!s100 Tf?8m1V<ZhgZ7BI6_eK=@3
+!s85 0
+!s108 1779341533.640000
+!s107 D:/Study_project/HDL/Lab5/ALU_Control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study_project/HDL/Lab5|D:/Study_project/HDL/Lab5/ALU_Control.v|
+!s101 -O0
+vControl_Unit
+IS2NBiJKdVPl__b=NEIEh90
+VW76Hc>8jG8:ZC0h:gNTKK0
+R1
+w1778573046
+8D:/Study_project/HDL/Lab5/Control_Unit.v
+FD:/Study_project/HDL/Lab5/Control_Unit.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@control_@unit
+!i10b 1
+!s100 RQ8^ggG^=o?Yn227ZJCh[2
+!s85 0
+!s108 1779341533.930000
+!s107 D:/Study_project/HDL/Lab5/Control_Unit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study_project/HDL/Lab5|D:/Study_project/HDL/Lab5/Control_Unit.v|
+!s101 -O0
+vDatapath
+IinUMSWGjcPT1C4_<TaMfd3
+Vm?N[3KzdjgBDN@=?f14^z1
+R1
+w1778574094
+8D:/Study_project/HDL/Lab5/Datapath.v
+FD:/Study_project/HDL/Lab5/Datapath.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@datapath
+!i10b 1
+!s100 CPBf7iYeQ4^UfQCSTU_@K1
+!s85 0
+!s108 1779341533.305000
+!s107 D:/Study_project/HDL/Lab5/Datapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study_project/HDL/Lab5|D:/Study_project/HDL/Lab5/Datapath.v|
+!s101 -O0
+vDual_Port_Ram
+IZl0k;6l00:];hEVMT<K^G0
+VJ7cfJNnbNVcj:e3WISHLH1
+R1
+w1778571987
+8D:/Study_project/HDL/Lab5/Dual_Port_Ram.v
+FD:/Study_project/HDL/Lab5/Dual_Port_Ram.v
+L0 1
+R2
+r1
+31
+R3
+R4
+n@dual_@port_@ram
+!i10b 1
+!s100 ZdPQECZhEV0Hin`A8:AkU1
+!s85 0
+!s108 1779341533.067000
+!s107 D:/Study_project/HDL/Lab5/Dual_Port_Ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study_project/HDL/Lab5|D:/Study_project/HDL/Lab5/Dual_Port_Ram.v|
+!s101 -O0
+vRegisterFile
+I=_KJBe[K<GBH4?PlOZ]^a2
+VD>F2GFg^]fXo2:5a1M38a3
+R1
+w1778553655
+8D:/Study_project/HDL/Lab5/RegisterFile.v
+FD:/Study_project/HDL/Lab5/RegisterFile.v
+L0 1
+R2
+r1
+31
+R3
+n@register@file
+R4
+!i10b 1
+!s100 D92C;W_N8T2df?09Wzo^11
+!s85 0
+!s108 1779341532.488000
+!s107 D:/Study_project/HDL/Lab5/RegisterFile.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study_project/HDL/Lab5|D:/Study_project/HDL/Lab5/RegisterFile.v|
+!s101 -O0
+vtb_Datapath
+!i10b 1
+!s100 NeORE:zTVYkNRRg66KO=?0
+IZcFNhE`oTY`aFLfPSWNM]2
+VHD=Q9e5Qc1NjNF3kNGo=J0
+R1
+w1779177155
+8D:/Study_project/HDL/Lab5/tb_Datapath.v
+FD:/Study_project/HDL/Lab5/tb_Datapath.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1779341534.183000
+!s107 D:/Study_project/HDL/Lab5/tb_Datapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Study_project/HDL/Lab5|D:/Study_project/HDL/Lab5/tb_Datapath.v|
+!s101 -O0
+R3
+R4
+ntb_@datapath

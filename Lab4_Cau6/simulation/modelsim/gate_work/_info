@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\HDL\Lab4\CAU6\simulation\modelsim
+vsram_interface
+IGS=ooG[gciE@<[YOKSeSI2
+VB@_1?fYI;8FTCBNFg2JbU3
+Z1 dD:\HDL\Lab4\CAU6\simulation\modelsim
+w1777963855
+8Cau6.vo
+FCau6.vo
+L0 31
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+!i10b 1
+!s100 IV0C0H1`fU>CmO2cLY:Ug1
+!s85 0
+!s108 1777963894.512000
+!s107 Cau6.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|Cau6.vo|
+!s101 -O0
+!s92 -vlog01compat -work work +incdir+. -O0
+vtb
+!i10b 1
+!s100 UMPdZiRi1CA@O7WgXBV]>0
+I<_<ANI9S?Hkk97QdiFVji2
+VV@Xn<HnSRM[I5c1?BH]3a3
+R1
+w1776486646
+8D:/HDL/Lab4/CAU6/tb.v
+FD:/HDL/Lab4/CAU6/tb.v
+L0 3
+R2
+r1
+!s85 0
+31
+!s108 1777963894.598000
+!s107 D:/HDL/Lab4/CAU6/tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/HDL/Lab4/CAU6|D:/HDL/Lab4/CAU6/tb.v|
+!s101 -O0
+R3
+!s92 -vlog01compat -work work +incdir+D:/HDL/Lab4/CAU6 -O0

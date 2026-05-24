@@ -1,0 +1,48 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do Cau6_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+D:/HDL/Lab4/CAU6 {D:/HDL/Lab4/CAU6/sram_interface.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sram_interface
+# 
+# Top level modules:
+# 	sram_interface
+# vlog -vlog01compat -work work +incdir+D:/HDL/Lab4/CAU6 {D:/HDL/Lab4/CAU6/hex_decoder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module hex_decoder
+# 
+# Top level modules:
+# 	hex_decoder
+# 
+# vlog -vlog01compat -work work +incdir+D:/HDL/Lab4/CAU6 {D:/HDL/Lab4/CAU6/tb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb
+# 
+# Top level modules:
+# 	tb
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs="+acc"  tb
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb 
+# Loading work.tb
+# Loading work.sram_interface
+# Loading work.hex_decoder
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Check HEX manually or extend design to expose read_data
+# Break in Module tb at D:/HDL/Lab4/CAU6/tb.v line 68
+# Simulation Breakpoint: Break in Module tb at D:/HDL/Lab4/CAU6/tb.v line 68
+# MACRO ./Cau6_run_msim_rtl_verilog.do PAUSED at line 18

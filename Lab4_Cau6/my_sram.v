@@ -1,0 +1,40 @@
+module my_sram (
+    input        CE_N,
+    input        OE_N,
+    input        WE_N,
+    input [17:0] ADDR,
+    inout [15:0] DQ
+);
+
+    // 
+    reg [15:0] mem [0:255];
+
+    // internal data out
+    reg [15:0] data_out;
+
+    // =========================
+    // READ
+    // =========================
+    always @(*) begin
+        if (!CE_N && !OE_N && WE_N) begin
+            data_out = mem[ADDR];
+        end else begin
+            data_out = 16'hZZZZ;
+        end
+    end
+
+    // =========================
+    // WRITE
+    // =========================
+    always @(*) begin
+        if (!CE_N && !WE_N) begin
+            mem[ADDR] = DQ;
+        end
+    end
+
+    // =========================
+    // TRI-STATE BUS
+    // =========================
+    assign DQ = (!CE_N && !OE_N && WE_N) ? data_out : 16'bz;
+
+endmodule

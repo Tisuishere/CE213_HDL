@@ -1,0 +1,61 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do Lab4_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+D:/Study_project/HDL/Lab4_New {D:/Study_project/HDL/Lab4_New/ALU_32bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ALU_32bit
+# 
+# Top level modules:
+# 	ALU_32bit
+# 
+# vlog -vlog01compat -work work +incdir+D:/Study_project/HDL/Lab4_New {D:/Study_project/HDL/Lab4_New/tb_ALU_32bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_ALU_32bit
+# 
+# Top level modules:
+# 	tb_ALU_32bit
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs="+acc"  tb_ALU_32bit
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneii_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb_ALU_32bit 
+# Loading work.tb_ALU_32bit
+# Loading work.ALU_32bit
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Time=0 | Op=000 | A=          0 | B=          0 | Out=         -1 | Ov=0
+# 
+# --- Logical Operations ---
+# Time=10000 | Op=000 | A=      65535 | B= 1431655765 | Out=     -65536 | Ov=0
+# Time=20000 | Op=001 | A=      65535 | B= 1431655765 | Out=      21845 | Ov=0
+# Time=30000 | Op=010 | A=      65535 | B= 1431655765 | Out= 1431677610 | Ov=0
+# Time=40000 | Op=011 | A=      65535 | B= 1431655765 | Out= 1431699455 | Ov=0
+# 
+# --- Arithmetic Operations ---
+# Time=50000 | Op=100 | A=        100 | B= 1431655765 | Out=         99 | Ov=0
+# Time=150000 | Op=101 | A=         15 | B=         25 | Out=         40 | Ov=0
+# Time=250000 | Op=110 | A=        100 | B=         40 | Out=         60 | Ov=0
+# Time=350000 | Op=111 | A=         99 | B=         40 | Out=        100 | Ov=0
+# 
+# --- Overflow Testing ---
+# Time=450000 | Op=100 | A=-2147483648 | B=         40 | Out= 2147483647 | Ov=1
+# Time=460000 | Op=101 | A= 2147483647 | B=          1 | Out=-2147483648 | Ov=1
+# Time=470000 | Op=110 | A=-2147483648 | B=          1 | Out= 2147483647 | Ov=1
+# Time=480000 | Op=111 | A= 2147483647 | B=          1 | Out=-2147483648 | Ov=1
+# 
+# --- Finished ---
+# Break in Module tb_ALU_32bit at D:/Study_project/HDL/Lab4_New/tb_ALU_32bit.v line 73
+# Simulation Breakpoint: Break in Module tb_ALU_32bit at D:/Study_project/HDL/Lab4_New/tb_ALU_32bit.v line 73
+# MACRO ./Lab4_run_msim_rtl_verilog.do PAUSED at line 17

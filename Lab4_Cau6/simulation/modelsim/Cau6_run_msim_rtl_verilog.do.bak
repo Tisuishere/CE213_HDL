@@ -1,0 +1,10 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+D:/HDL/Lab4/CAU6 {D:/HDL/Lab4/CAU6/sram_interface.v}
+vlog -vlog01compat -work work +incdir+D:/HDL/Lab4/CAU6 {D:/HDL/Lab4/CAU6/hex_decoder.v}
+
